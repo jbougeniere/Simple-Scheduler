@@ -1,6 +1,6 @@
 FROM php:7.3-apache
 
-RUN apt-get update && apt-get install -y apt-transport-https
+RUN apt-get install -y apt-transport-https
 RUN apt-get -y install sudo
 
 COPY 000-default.conf /etc/apache2/sites-enabled
