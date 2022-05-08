@@ -1,6 +1,6 @@
 FROM php:7.3-apache
 
-RUN apt-get update 
+RUN apt-get y update 
 RUN apt-get -y install sudo
 
 COPY 000-default.conf /etc/apache2/sites-enabled
