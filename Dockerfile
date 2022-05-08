@@ -2,7 +2,7 @@
 # FROM $BUILD_FROM AS RUNNING
 FROM php:7.3-apache
 
-RUN apt-get update && apt-get -y install sudo
+# RUN apt-get update && apt-get -y install sudo
 
 COPY 000-default.conf /etc/apache2/sites-enabled
 COPY /web /var/www/html
