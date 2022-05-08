@@ -1,7 +1,8 @@
 FROM php:7.3-apache
 
-RUN apt-get install -y apt-transport-https
-RUN apt-get -y install sudo
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+RUN apt-get update && apt-get -y install sudo
 
 COPY 000-default.conf /etc/apache2/sites-enabled
 COPY /web /var/www/html
